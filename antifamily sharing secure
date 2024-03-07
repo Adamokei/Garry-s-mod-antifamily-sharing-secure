@@ -1,0 +1,5 @@
+hook.Add("PlayerAuthed", "AntiShared", function(ply)
+   	if ply:OwnerSteamID64() != ply:SteamID64() then
+		RunConsoleCommand("ulx", "banid", ply:SteamID(), "0", "Ваш стим айди не был просканирован!")
+	end
+end)
